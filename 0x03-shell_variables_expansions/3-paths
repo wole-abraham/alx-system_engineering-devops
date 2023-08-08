@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | sort -u | uniq -u | grep -o [[:alpha:]]: | wc -l
+echo $PATH | tr ":" "\n"| wc -l
