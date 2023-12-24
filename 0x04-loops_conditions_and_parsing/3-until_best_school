@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#using a while loop to echo Best school 10 times
+VAR=0
+until [ $VAR -eq 10 ]
+do
+    echo "Best School"
+    ((VAR++))
+
+done
