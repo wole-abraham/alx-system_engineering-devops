@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#using a while loop to echo Best school 10 times
+
+VAR=1
+while [ $VAR -le 10 ]
+do
+if [ $VAR -eq 9 ]; then
+    echo "Best School"
+    echo "Hi"
+else
+    echo "Best School"
+fi
+
+((VAR++))
+done
