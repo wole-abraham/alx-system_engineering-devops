@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#using a while loop to echo Best school 10 times
+VAR=1
+while((VAR <= 10))
+do
+    echo "Best School"
+    ((VAR++))
+done
