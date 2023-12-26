@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Write a Bash script that displays numbers from 1 to 100.
+
+# Navigate to the current directory
+cd "$(dirname "$0")"
+
+# Loop through files in the directory
+for file in *; do
+    # Check if the file name contains a dash "-"
+    if [[ $file == *-* ]]; then
+        # Extract the part of the name after the first dash
+        name_after_dash=$(echo "$file" | cut -d'-' -f2-)
+        echo "$name_after_dash"
+    else
+        # If the file doesn't contain a dash, display the full name
+        echo "$file"
+    fi
+done
