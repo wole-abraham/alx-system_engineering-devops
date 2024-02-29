@@ -5,6 +5,6 @@ apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/index.html
 new_string="server_name_;\n\trewrite ^/redirect_me$ www.googl.com permanent;"
-sed -i "s/server_name_;/$new_string/" /etc/nginx/sites-a*/default
-service nginx start
+sed -i "s/server_name_;/$new_string/" /etc/nginx/sites-available/default
+service nginx restart
 
