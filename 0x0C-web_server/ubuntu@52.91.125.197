@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#bash script to configure nginx server
+
+apt-get -y install nginx
+
+
+echo -e "server {\n\tlisten 80 default_server;\n\tlisten [::]:80 default_server;\n\t\n\troot /var/www/html;\n\tindex.html index.htm\n\t\n\tserver_name_;\n\n\tlocation / {\n\t\ttry_files $uri $uri/=404;\n}\n"} > /etc/nginx/sites-available/default
+
+echo "Hello World!" > /var/www/html/index.html
