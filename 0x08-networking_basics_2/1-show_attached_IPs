@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#display ipv4 addresses
-ifconfig | awk '/inet / {print $2}'

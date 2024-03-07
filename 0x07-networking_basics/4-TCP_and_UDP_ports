@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-#display listening ports and PID associated with thenm
-netstat -lp
