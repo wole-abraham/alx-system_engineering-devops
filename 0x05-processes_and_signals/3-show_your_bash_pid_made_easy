@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Get the process ID of the running script
+script_pid=$$
+
+# Use 'cat' command to get the process name of the script
+process_name=$(cat /proc/"$script_pid"/cmdline | tr -d '\0')
+
+# Print the process ID and name
+echo "$script_pid" "$process_name"
+
