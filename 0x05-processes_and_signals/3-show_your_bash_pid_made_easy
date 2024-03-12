@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
 # Get the process ID of the running script
+
 script_pid=$$
 
 # Use 'cat' command to get the process name of the script
