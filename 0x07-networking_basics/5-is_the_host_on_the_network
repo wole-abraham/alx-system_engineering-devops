@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# pings the ip 5 times
+
+ping "$1" -c 5
+
