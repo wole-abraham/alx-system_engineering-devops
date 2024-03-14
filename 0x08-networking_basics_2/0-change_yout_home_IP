@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-
+# changes the hosts files
+#
 echo '127.0.0.2    localhost' > /etc/hosts
-echo '8.8.8.8      facebook.com >> /etc/hosts
+echo '8.8.8.8      facebook.com' >> /etc/hosts
 
