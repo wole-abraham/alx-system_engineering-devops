@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#show all listening connections and their process id
 netstat -l -p
