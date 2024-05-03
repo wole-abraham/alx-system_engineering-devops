@@ -1,3 +1,5 @@
+#create a file school with the content i love school
+
 file {'school':
         ensure  => present,
         path    => '/tmp/school',
