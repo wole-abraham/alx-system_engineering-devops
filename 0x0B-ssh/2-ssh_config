@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # sshd config
-
- cat "Host *
-        IdentityFile ~/.ssh/school
-        PasswordAuthentication no" >> /etc/ssh/sshd_config
+ cat "Host *" >> /etc/ssh/sshd_config
+ cat "  IdentityFile ~/.ssh/school" >> /etc/ssh/sshd_config
+ cat "  PasswordAuthentication no" >> /etc/ssh/sshd_config
