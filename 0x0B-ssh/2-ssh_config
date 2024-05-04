@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # sshd config
-echo "Host *" >> /etc/ssh/sshd_config
-echo "  IdentityFile ~/.ssh/school" >> /etc/ssh/sshd_config
-echo "  PasswordAuthentication no" >> /etc/ssh/sshd_config
+echo "Host *" >> /etc/ssh/ssh_config
+echo "  IdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config
+echo "  PasswordAuthentication no" >> /etc/ssh/ssh_config
