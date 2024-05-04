@@ -1,1 +1,3 @@
-ssh README.md
+#!/usr/bin/env bash
+
+ssh ubuntu@100.26.238.162 -i ~/.ssh/school
