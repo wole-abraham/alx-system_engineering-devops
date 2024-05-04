@@ -2,8 +2,8 @@
 
 file {'/tmp/school':
         ensure  => file,
-        group   => 'www-data',
         owner   => 'www-data',
+        group   => 'www-data',
+        mode    => '0774',
         content => 'I love puppet',
-        mode    => '0744',
-        }
+}
