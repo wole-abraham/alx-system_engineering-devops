@@ -6,7 +6,7 @@ sudo apy-get -y upgrade
 sudo apt-get install -y nginx
 sudo ufw allow 'Nginx HTTP'
 
-echo "hello world" | sudo tee /var/www/html/index.html
+echo "hello world!" | sudo tee /var/www/html/index.html
 
 # Restart nginx without using systemctl
 nginx -s reload
