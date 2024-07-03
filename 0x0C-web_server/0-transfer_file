@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # uses scp to transfer a file to a designated server
 
 
