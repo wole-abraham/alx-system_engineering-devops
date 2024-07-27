@@ -1,3 +1,4 @@
+# allow deny all incoming traffic except on 22, 442, 80
 sudo ufw default deny incoming
 sudo ufw allow 22
 sudo ufw allow 80
