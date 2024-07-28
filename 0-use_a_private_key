@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# using ssh to connect to server with a specific identity file
+ssh ubuntu@52.3.241.182 -i ~/.ssh/school
