@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# script to backup data
+
+DATE=$(date +"%d-%m-%Y")
+PASS="$1"
+
+mysql -uroot -p"$PASS" --all-databases > backup.sql
+
+tar -czvf "$DATE.tar.gz" backup.sql
