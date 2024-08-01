@@ -27,4 +27,4 @@ com/users/{argv[1]}').json().get('name')
     print(f'Employee {employee_name} is done with tasks({tasks_done}\
 /{no_of_tasks}):')
     for i in tasks_done_in:
-        print(f'\t{i}')
+        print(f'\t {i}')
