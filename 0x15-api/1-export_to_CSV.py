@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""Python script uses an api https://jsonplaceholder.typicode.com
-    to generate some fake data and some other fake stuudd:w
-"""
+"""Python script uses an api https://jsonplaceholder.typicode.com"""
 
 import requests
 from sys import argv
