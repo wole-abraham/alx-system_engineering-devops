@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Python script uses an api https://jsonplaceholder.typicode.com"""
 
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == '__main__':
     employee_id = argv[1]
@@ -21,4 +21,4 @@ if __name__ == '__main__':
         info = [{"task": task.get('title'), "completed": task.get('completed'),
                  "username": username} for task in tasks]
         info = {employee_id: info}
-        file.write(json.dumps(info))
+        json.dump(info, file)
