@@ -1,24 +1,22 @@
 #!/usr/bin/python3
-"""Accessing a REST API for todo lists of employees"""
+"""Python script uses an api https://jsonplaceholder.typicode.com"""
 
 import requests
-import sys
-
+from sys import argv
 
 if __name__ == '__main__':
-    employeeId = sys.argv[1]
-    baseUrl = "https://jsonplaceholder.typicode.com/users"
-    url = baseUrl + "/" + employeeId
+    employee_id = argv[1]
+    base_url = 'https://jsonplaceholder.typicode.com/users'
+    url = base_url + "/" + employee_id
+    
+    employee = requests.get(url)
+    username = employee.json().get('username')
 
-    response = requests.get(url)
-    username = response.json().get('username')
+    todo_url = url + '/todos'
+    tasks = requests.get(todo_url).json()
 
-    todoUrl = url + "/todos"
-    response = requests.get(todoUrl)
-    tasks = response.json()
 
-    with open('{}.csv'.format(employeeId), 'w') as file:
+    with open(f"{argv[1]}.csv", mode='w', encoding='utf-8') as file:
         for task in tasks:
-            file.write('"{}","{}","{}","{}"\n'
-                       .format(employeeId, username, task.get('completed'),
-                               task.get('title')))
+            file.write(f'"{employee_id}","{username}"\
+,"{task.get("completed")}","{task.get("title")}"\n')
