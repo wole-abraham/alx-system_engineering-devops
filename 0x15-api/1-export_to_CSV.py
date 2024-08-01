@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
     Python script uses an api https://jsonplaceholder.typicode.com
     to generate some fake data and some other fake stuudd:w
 """
@@ -29,4 +29,3 @@ com/users/{argv[1]}').json()
         for task in todos.json():
             file.write(f'"{employee_name.get('id')}","{employee_name.get("username")}"\
 ,"{task.get("completed")}","{task.get("title")}"\n')
-
