@@ -4,8 +4,8 @@
     for a given subreddit
 """
 
-from sys import argv
 import requests
+from sys import argv
 
 
 def number_of_subscribers(subreddit):
@@ -27,8 +27,3 @@ def number_of_subscribers(subreddit):
         return subs
     else:
         return 0
-
-
-if __name__ == "__main__":
-
-    print(number_of_subscribers(argv[1]))
