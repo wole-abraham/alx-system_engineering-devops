@@ -18,6 +18,10 @@ def number_of_subscribers(subreddit):
     :param subreddit: The name of the subreddit.
     :return: The number of subscribers or 0 if the subreddit is invalid.
     """
+
+    if subreddit is None or not isinstance(subreddit, str):
+        return 0
+
     headers = {'User-Agent': "python:subreddit.subscriber.counter:v1.0\
 (by /u/Responsible-Bonus-58)"}
     base_url = requests.get(f'https://www.reddit.com/r/{subreddit}/about.json',
