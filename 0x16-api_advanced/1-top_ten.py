@@ -11,18 +11,18 @@ from sys import argv
 def top_ten(subreddit):
     """
     Queries the Reddit API to print the titles of the first 10 hot posts
-    listed for a given subreddit. If the subreddit is invalid, prints None.
 
-    :param subreddit: The name of the subreddit.
     """
 
-    url = f'https://www.reddit.com/r/{subreddit}/hot.json?limit=10'
+    url = f'https://www.reddit.com/r/{subreddit}/hot.json'
     headers = {
         "User-Agent": "python:subreddit.hot.posts:v1.0 (by /u/yourusername)"
         }
+    params = {'limit': 9}
 
     try:
-        response = requests.get(url, headers=headers, allow_redirects=False)
+        response = requests.get(url, headers=headers, allow_redirects=False,
+                                params=params)
         if response.status_code == 200:
             posts = response.json().get('data', {}).get('children', [])
             if not posts:
@@ -34,8 +34,3 @@ def top_ten(subreddit):
             print(None)
     except requests.RequestException:
         print(None)
-
-
-if __name__ == "__main__":
-
-    top_ten(argv[1])
