@@ -1,3 +1,4 @@
+#server block to proxy requests to applications listening on certain ports
 server {
 	listen 80;
 
